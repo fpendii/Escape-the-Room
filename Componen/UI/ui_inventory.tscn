@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdw11xf1plqlc"]
+
+[ext_resource type="Script" path="res://Componen/UI/ui_inventory.gd" id="1_ltthr"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h1ply"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a88w1"]
+line_spacing = 2.995
+font_size = 61
+
+[node name="uiInventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ltthr")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_h1ply")
+layout_mode = 1
+offset_left = 210.0
+offset_top = 66.0
+offset_right = 1025.0
+offset_bottom = 273.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.354
+anchor_right = 0.658
+anchor_bottom = 0.292
+offset_left = 87.072
+offset_right = -87.256
+offset_bottom = 0.187988
+grow_horizontal = 2
+text = "Inventory"
+label_settings = SubResource("LabelSettings_a88w1")
+horizontal_alignment = 1
+vertical_alignment = 1

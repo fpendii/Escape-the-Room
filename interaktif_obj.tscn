@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://by6epmqbh76mg"]
+[gd_scene load_steps=13 format=3 uid="uid://by6epmqbh76mg"]
 
 [ext_resource type="Texture2D" uid="uid://qnev4xjfnrc4" path="res://assets/image/inilah-cara-merawat-anak-kucing-yang-tepat.jpg" id="2_2ph6k"]
 [ext_resource type="Script" path="res://area_2d.gd" id="3_u8y6k"]
 [ext_resource type="Texture2D" uid="uid://b8x4xsv6njmvm" path="res://assets/image/27.png" id="4_31esn"]
+[ext_resource type="Texture2D" uid="uid://b0d1ehrym0fgt" path="res://assets/image/43.png" id="5_05pt6"]
 [ext_resource type="Script" path="res://gunting_area.gd" id="5_cg2kb"]
 [ext_resource type="PackedScene" uid="uid://d37ax0rg06ijo" path="res://inventory.tscn" id="6_h8q7c"]
+[ext_resource type="Script" path="res://kotak_obat_area.gd" id="6_wd0ie"]
 [ext_resource type="PackedScene" uid="uid://ckxexxy0efsme" path="res://ui_popup.tscn" id="6_wo6qd"]
+[ext_resource type="PackedScene" uid="uid://wm5hwy05j5kc" path="res://Componen/Button/btn_inventory.tscn" id="9_ir7tx"]
+[ext_resource type="PackedScene" uid="uid://bdw11xf1plqlc" path="res://Componen/UI/ui_inventory.tscn" id="10_ctp7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_souvh"]
 size = Vector2(281.5, 186.5)
@@ -40,6 +44,28 @@ script = ExtResource("5_cg2kb")
 scale = Vector2(25.435, 25.435)
 shape = SubResource("RectangleShape2D_atan0")
 
+[node name="KotakObat" type="Sprite2D" parent="."]
+position = Vector2(926, 449)
+scale = Vector2(0.349894, 0.349894)
+texture = ExtResource("5_05pt6")
+
+[node name="KotakObatArea" type="Area2D" parent="KotakObat"]
+script = ExtResource("6_wd0ie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KotakObat/KotakObatArea"]
+position = Vector2(0, -34.2961)
+scale = Vector2(25.8014, 18.4036)
+shape = SubResource("RectangleShape2D_atan0")
+
 [node name="UI_Popup" parent="." instance=ExtResource("6_wo6qd")]
 
 [node name="Inventory" parent="." instance=ExtResource("6_h8q7c")]
+
+[node name="btnInventory" parent="." instance=ExtResource("9_ir7tx")]
+
+[node name="uiInventory" parent="." instance=ExtResource("10_ctp7q")]
+offset_left = -19.0
+offset_top = 59.0
+offset_right = -19.0
+offset_bottom = 59.0
+size_flags_horizontal = 0

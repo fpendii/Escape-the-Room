@@ -12,7 +12,11 @@ func _ready() -> void:
 func hide_popup():
 	hide()
 
-func show_popup(nama_objek: String, deskripsi_objek: String):
-	LabelNamaItem.text = nama_objek
-	LabelDeskripsiItem.text = deskripsi_objek
+func show_popup(nama_objek: String, deskripsi_objek: String, notif = null):
+	if notif == null:
+		LabelNamaItem.text = nama_objek
+		LabelDeskripsiItem.text = deskripsi_objek
+	else :
+		LabelNamaItem.text = nama_objek
+		LabelDeskripsiItem.text = notif
 	show()

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://wm5hwy05j5kc"]
+
+[ext_resource type="Script" path="res://Componen/Button/btn_inventory.gd" id="1_ere8k"]
+
+[node name="btnInventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ere8k")
+
+[node name="Panel" type="Panel" parent="."]
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="btnInventory" type="Button" parent="Panel"]
+layout_mode = 1
+offset_left = 1013.0
+offset_top = 577.0
+offset_right = 1112.0
+offset_bottom = 622.0
+text = "Inventory"
+
+[connection signal="pressed" from="Panel/btnInventory" to="." method="_on_btn_inventory_pressed"]
+[connection signal="pressed" from="Panel/btnInventory" to="Panel/btnInventory" method="_on_pressed"]
