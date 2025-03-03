@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	pass
 
 
+
 func _on_btn_clear_pressed() -> void:
 	input_kode = ""
 	display_label.text = ""
@@ -30,6 +31,8 @@ func _on_btn_clear_pressed() -> void:
 func _on_btn_enter_pressed() -> void:
 	if input_kode == kode:
 		display_label.text = "Kode Benar!!"
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://interaktif_obj.tscn")
 	else:
 		display_label.text = "Kode Salah!!"
 		input_kode = ""
@@ -69,3 +72,7 @@ func _on_button_9_pressed() -> void:
 
 func _on_button_10_pressed() -> void:
 	tambah_angka("0")
+
+
+func _on_btn_kembali_pressed() -> void:
+	get_tree().change_scene_to_file("res://interaktif_obj.tscn")

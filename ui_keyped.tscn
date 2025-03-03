@@ -118,6 +118,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Clear"
 
+[node name="btnKembali" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Kembali"
+
 [connection signal="pressed" from="Panel/VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
@@ -130,3 +135,4 @@ text = "Clear"
 [connection signal="pressed" from="Panel/VBoxContainer/GridContainer/Button10" to="." method="_on_button_10_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/btnEnter" to="." method="_on_btn_enter_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/btnKembali" to="." method="_on_btn_kembali_pressed"]
