@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnjnfvj8t01b"]
+
+[ext_resource type="Script" path="res://ui_keyped.gd" id="1_8fte8"]
+
+[node name="ui_keyped" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8fte8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -149.0
+offset_right = 387.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DislayLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 16.4
+columns = 3
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "1"
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "2"
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "3"
+
+[node name="Button4" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "4"
+
+[node name="Button5" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "5"
+
+[node name="Button6" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "6"
+
+[node name="Button7" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "7"
+
+[node name="Button8" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "8"
+
+[node name="Button9" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "9"
+
+[node name="Button10" type="Button" parent="Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "0"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.354
+anchor_top = 0.86
+anchor_right = 0.646
+anchor_bottom = 1.0
+offset_left = 167.884
+offset_top = 90.72
+offset_right = -167.884
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="btnEnter" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Enter"
+
+[node name="btnClear" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Clear"

@@ -5,4 +5,3 @@ extends Control
 
 func _on_btn_inventory_pressed() -> void:
 	uiInventory.show()
-	print('babi')

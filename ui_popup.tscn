@@ -38,7 +38,9 @@ offset_top = 6.71
 offset_right = 250.651
 offset_bottom = 99.71
 grow_vertical = 2
-text = "Deskripsi"
+text = "Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi Deskripsi"
+autowrap_mode = 1
+ellipsis_char = "."
 
 [node name="ButtonTutup" type="Button" parent="Panel"]
 layout_mode = 0

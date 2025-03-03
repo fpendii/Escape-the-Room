@@ -14,8 +14,9 @@ func _ready() -> void:
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if inventory.has_item("Kunci"):
-			
 			bukaKotak()
+			objek.queue_free()
+			get_tree().change_scene_to_file("res://ui_keyped.tscn")
 		else :
 			show_interaction()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://by6epmqbh76mg"]
+[gd_scene load_steps=12 format=3 uid="uid://by6epmqbh76mg"]
 
 [ext_resource type="Texture2D" uid="uid://qnev4xjfnrc4" path="res://assets/image/inilah-cara-merawat-anak-kucing-yang-tepat.jpg" id="2_2ph6k"]
 [ext_resource type="Script" path="res://area_2d.gd" id="3_u8y6k"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://d37ax0rg06ijo" path="res://inventory.tscn" id="6_h8q7c"]
 [ext_resource type="Script" path="res://kotak_obat_area.gd" id="6_wd0ie"]
 [ext_resource type="PackedScene" uid="uid://ckxexxy0efsme" path="res://ui_popup.tscn" id="6_wo6qd"]
-[ext_resource type="PackedScene" uid="uid://wm5hwy05j5kc" path="res://Componen/Button/btn_inventory.tscn" id="9_ir7tx"]
 [ext_resource type="PackedScene" uid="uid://bdw11xf1plqlc" path="res://Componen/UI/ui_inventory.tscn" id="10_ctp7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_souvh"]
@@ -49,10 +48,10 @@ position = Vector2(926, 449)
 scale = Vector2(0.349894, 0.349894)
 texture = ExtResource("5_05pt6")
 
-[node name="KotakObatArea" type="Area2D" parent="KotakObat"]
+[node name="Area2D" type="Area2D" parent="KotakObat"]
 script = ExtResource("6_wd0ie")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KotakObat/KotakObatArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KotakObat/Area2D"]
 position = Vector2(0, -34.2961)
 scale = Vector2(25.8014, 18.4036)
 shape = SubResource("RectangleShape2D_atan0")
@@ -61,11 +60,9 @@ shape = SubResource("RectangleShape2D_atan0")
 
 [node name="Inventory" parent="." instance=ExtResource("6_h8q7c")]
 
-[node name="btnInventory" parent="." instance=ExtResource("9_ir7tx")]
-
 [node name="uiInventory" parent="." instance=ExtResource("10_ctp7q")]
-offset_left = -19.0
-offset_top = 59.0
-offset_right = -19.0
-offset_bottom = 59.0
+offset_left = -23.0
+offset_top = -30.0
+offset_right = -23.0
+offset_bottom = -30.0
 size_flags_horizontal = 0

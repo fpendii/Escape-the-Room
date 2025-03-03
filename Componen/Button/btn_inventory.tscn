@@ -10,6 +10,7 @@ offset_bottom = 40.0
 script = ExtResource("1_ere8k")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -21,6 +22,7 @@ offset_top = 577.0
 offset_right = 1112.0
 offset_bottom = 622.0
 text = "Inventory"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Panel/btnInventory" to="." method="_on_btn_inventory_pressed"]
 [connection signal="pressed" from="Panel/btnInventory" to="Panel/btnInventory" method="_on_pressed"]
